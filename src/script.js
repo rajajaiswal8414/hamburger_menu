@@ -3,12 +3,17 @@ const humburgerIcon = document.querySelector('.humburgerIcon');
 const menuIcon = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
 const goToTop = document.querySelector('.goToTop');
+const headerContent = document.querySelector('.header-content');
 
 humburgerIcon.addEventListener('click', (e) => {
-    e.stopPropagation()
+    // e.stopPropagation();
     menuBox.classList.add('show')
     menuIcon.classList.add('d-none');
     closeIcon.classList.remove('d-none')
+})
+
+headerContent.addEventListener('click', (e) => {
+    e.stopPropagation();
 })
 
 closeIcon.addEventListener('click', () => {
