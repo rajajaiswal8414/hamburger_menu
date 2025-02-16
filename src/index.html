@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        scroll-behavior: smooth;
+        height: 100vh;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+
+      @media (max-width: 640px) {
+        .menu-box {
+          right: -100%;
+          width: 60%;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-box.show {
+          transform: translateX(-150%);
+        }
+
+        .visibility {
+          visibility: visible;
+        }
+
+        .d-visible {
+          display: block;
+        }
+
+        .d-none {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sticky top-0 font-poppins h-fit w-screen">
+      <section class="container m-auto max-w-screen-2xl">
+        <nav
+          class="font-bold bg-customBg sm:bg-white text-xs md:text-sm lg:text-lg xl:text-xl w-full text-navText lg:h-28 md:h-24 h-20 pl-4 flex items-center justify-between"
+        >
+          <div class="lg:w-16 lg:h-16 md:w-12 md:h-12 w-10 h-10">
+            <img src="images/image.png" class="ml-3" alt="" />
+          </div>
+
+          <div
+            class="menu-box absolute bg-white bg-opacity-70 backdrop-blur-sm sm:shadow-none shadow-md p-4 rounded-md top-4 sm:top-auto sm:right-auto sm:flex sm:static sm:justify-evenly sm:w-5/6 lg:w-3/4 xl:w-2/3"
+          >
+            <p
+              class="mt-2 sm:mt-0 mb-4 hover:underline sm:hover:no-underline sm:mb-0"
+            >
+              <a href="#top-picks">Top Picks</a>
+            </p>
+            <p class="mb-4 hover:underline sm:hover:no-underline sm:mb-0">
+              <a href="#whopper">Whopper</a>
+            </p>
+            <p class="mb-4 hover:underline sm:hover:no-underline sm:mb-0">
+              <a href="#stunner-menu">Stunner Menu</a>
+            </p>
+            <p class="mb-4 hover:underline sm:hover:no-underline sm:mb-0">
+              <a href="#foodie-collection">New Foodie Collection</a>
+            </p>
+            <p class="mb-3 hover:underline sm:hover:no-underline sm:mb-0">
+              <a href="#deal-day">Deal of the Day</a>
+            </p>
+          </div>
+        </nav>
+
+        <div class="sm:hidden">
+          <i
+            class="close-icon d-none fa-solid fa-x z-30 sm:z-0 absolute top-4 right-4 text-xl cursor-pointer"
+          ></i>
+        </div>
+
+        <div class="humburgerIcon sm:hidden">
+          <img
+            src="images/menu.png"
+            alt=""
+            class="absolute top-0 right-0 z-10 w-16"
+          />
+          <i
+            class="fa-solid fa-bars menu-icon absolute text-xl top-4 right-4 z-10"
+          ></i>
+        </div>
+      </section>
+    </header>
+
+    <main class="h-fit bg-customBg">
+      <section class="container m-auto">
+        <div class="flex flex-col items-center">
+          <img src="images/image1.png" alt="" class="w-11/12 mt-12" />
+          <p
+            class="font-poppins text-center sm:text-xl text-sm mt-3 text-paraText"
+          >
+            Well, You can't resist anymore!
+          </p>
+        </div>
+
+        <div
+          id="top-picks"
+          class="scroll-mt-28 md:mt-28 mt-20 flex flex-col bg-customBg items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-xl text-lg lg:mb-6 md:mb-5 sm:mb-4 mb-2 font-bold font-poppins text-paraText"
+          >
+            Top Picks
+          </h1>
+          <img src="images/image2.png" alt="" class="w-9/12" />
+        </div>
+
+        <div
+          id="whopper"
+          class="scroll-mt-28 md:mt-28 sm:mt-20 mt-16 flex flex-col bg-customBg items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-xl text-lg lg:mb-6 md:mb-5 sm:mb-4 mb-2 font-bold font-poppins text-paraText"
+          >
+            Whopper
+          </h1>
+          <img src="images/image3.png" alt="" class="w-9/12" />
+        </div>
+
+        <div
+          id="stunner-menu"
+          class="scroll-mt-28 md:mt-28 sm:mt-20 mt-16 flex flex-col bg-customBg items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-xl text-lg lg:mb-6 md:mb-5 sm:mb-4 mb-2 font-bold font-poppins text-paraText"
+          >
+            Stunner Menu
+          </h1>
+          <img src="images/image4.png" alt="" class="w-9/12" />
+        </div>
+
+        <div
+          id="foodie-collection"
+          class="scroll-mt-28 md:mt-28 sm:mt-20 mt-16 flex flex-col bg-customBg items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-xl text-lg lg:mb-6 md:mb-5 sm:mb-4 mb-2 font-bold font-poppins text-paraText"
+          >
+            New Foodie Collection
+          </h1>
+          <img src="images/image5.png" alt="" class="w-9/12" />
+        </div>
+
+        <div
+          id="deal-day"
+          class="scroll-mt-28 md:mt-28 sm:mt-20 mt-16 flex flex-col bg-customBg items-center"
+        >
+          <h1
+            class="lg:text-4xl md:text-3xl sm:text-xl text-lg lg:mb-6 md:mb-5 sm:mb-4 mb-2 font-bold font-poppins text-paraText"
+          >
+            Deal of the Day
+          </h1>
+          <img src="images/image6.png" alt="" class="w-9/12 bg-cover" />
+          <h1
+            class="font-poppins mt-5 sm:text-lg md:text-xl text-sm font-bold text-paraText flex justify-end mb-10 w-9/12"
+          >
+            <a href="#">Go to Top </a>
+          </h1>
+          <p class="font-poppins text-sm sm:text-lg md-text-xl mb-5">
+            Made with ❤️ by Raja Jaiswal
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
