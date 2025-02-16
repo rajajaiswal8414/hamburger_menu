@@ -862,6 +862,10 @@ video {
     position: static;
   }
 
+  .sm\:sticky {
+    position: sticky;
+  }
+
   .sm\:right-auto {
     right: auto;
   }
