@@ -5,7 +5,7 @@ const closeIcon = document.querySelector('.close-icon');
 const goToTop = document.querySelector('.goToTop');
 
 humburgerIcon.addEventListener('click', (e) => {
-    // e.stopPropagation()
+    e.stopPropagation()
     menuBox.classList.add('show')
     menuIcon.classList.add('d-none');
     closeIcon.classList.remove('d-none')
